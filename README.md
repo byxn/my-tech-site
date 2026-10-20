@@ -68,7 +68,7 @@ git push -u origin main
 
 ### 开启 Pages
 
-在 GitHub 仓库打开 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions**。之后在 **Actions** 页查看部署状态；成功后从 `github-pages` environment 或 Pages 设置页打开网站。
+首次部署前，先在 GitHub 仓库打开 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions** 并保存。`configure-pages` 会检查 Pages 配置，但默认 `GITHUB_TOKEN` 不会替仓库开启 Pages；若未启用，工作流会在该步骤报 `Get Pages site failed: Not Found`。随后推送到 `main` 或 `master`，并在 **Actions** 页查看部署状态；成功后从 `github-pages` environment 或 Pages 设置页打开网站。
 
 ### base 路径
 
